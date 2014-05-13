@@ -1,0 +1,17 @@
+doctype html
+html(lang="en-us")
+  head
+    title Testing 123
+    script(src='/public/js/scripts.js')
+  body
+    header
+      h1 Hi there!
+    section.content
+      if model.errors
+        each error in model.errors
+          p #{error}
+      form(method='post', action='')
+        input(type='text', name='name', value='#{model.name}')
+        input(type='submit', value='Submit!')
+    aside
+      p #{model.name}
